@@ -196,10 +196,10 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
 
                 {/* Seconds */}
                 <div className="text-center bg-background/30 p-2 sm:p-4 rounded-xl between-768-900:p-3">
-                  <p className="lg:text-3xl md:text-2xl text-pink sm:text-2xl text-4xl font-bold">
+                  <p className="lg:text-3xl md:text-2xl text-white sm:text-2xl text-4xl font-bold">
                     {String(timeLeft.seconds).padStart(2, "0")}
                   </p>
-                  <p className="text-xs text-pink sm:text-base">Seconds</p>
+                  <p className="text-xs text-white sm:text-base">Seconds</p>
                 </div>
               </div>
             </div>

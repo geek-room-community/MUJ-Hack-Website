@@ -207,8 +207,8 @@ const NavItem: React.FC<NavItemProps> = ({
       <button
         ref={navItemRef}
         className={`w-full md:w-16 py-2 h-[4rem] flex items-center justify-center transition-colors 
-          ${isActive ? "bg-pink text-[#151a20] md:bg-pink md:text-[#151a20]" : ""}
-          ${isHovered ? "bg-pink text-[#151a20]" : ""}
+          ${isActive ? "bg-[#FFA6A9] text-[#151a20] md:bg-[#FFA6A9] md:text-[#151a20]" : ""}
+          ${isHovered ? "bg-[#FFA6A9] text-[#151a20]" : ""}
           ${isFirst ? "rounded-l-full md:rounded-t-full md:rounded-b-none" : ""}
           ${isLast ? "rounded-r-full md:rounded-b-full md:rounded-t-none" : ""}
         `}

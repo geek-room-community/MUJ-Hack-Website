@@ -70,7 +70,7 @@ const TimeLine: React.FC = () => {
 
       {/* Horizontal Timeline for larger screens */}
       <div className="relative mb-[5rem] hidden md:flex between-768-900:hidden">
-        <div className="absolute bg-pink h-1 top-1/2 left-[5rem] right-16 z-0 transform md:translate-y-[-4.5rem]"></div>
+        <div className="absolute bg-[#FFA6A9] h-1 top-1/2 left-[5rem] right-16 z-0 transform md:translate-y-[-4.5rem]"></div>
         {dayData[selectedDay].tasks.map((task, index) => (
           <div key={index} className="flex flex-col items-center relative px-4">
             <div className="bg-white w-8 h-8 rounded-full border-8 border-purple z-10 relative -translate-y-1/2"></div>
@@ -86,7 +86,7 @@ const TimeLine: React.FC = () => {
           <button
             key={index}
             onClick={() => setSelectedDay(index)}
-            className={`px-6 py-2  font-bold rounded-[3rem] ${selectedDay === index ? 'bg-pink text-white' : 'bg-gray-200 text-gray-600'}`}
+            className={`px-6 py-2  font-bold rounded-[3rem] ${selectedDay === index ? 'bg-[#FFA6A9] text-white' : 'bg-gray-200 text-gray-600'}`}
           >
             {day.title}
           </button>
