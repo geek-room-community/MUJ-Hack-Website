@@ -77,7 +77,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black">
+    <div className="flex flex-col items-center justify-center min-h-screen ">
       <h1 className="md:text-[13rem] mt-[0.1rem] font-bebas text-8xl text-[#f8e8d9] font-bold mb-[4rem] md:mb-[6rem] text-center">
         SPONSORS
       </h1>

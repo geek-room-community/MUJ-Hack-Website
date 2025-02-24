@@ -25,7 +25,7 @@ const judges: Judge[] = [
 
 export default function Judge(): JSX.Element {
   return (
-    <div className="container mx-auto px-4 h-auto sm:px-6 lg:px-8 bg-black text-white">
+    <div className="container mx-auto px-4 h-auto sm:px-6 lg:px-8 text-white">
       <div className="text-center mt-9 mb-12 lg:mt-12 lg:mb-16">
         <h1 className="md:text-[13rem] font-bebas text-8xl mt-[3rem] sm:mt-[1.5rem] text-[#f8e8d9] font-bold mb-[2rem] md:mb-[5rem] text-center">
           JUDGES

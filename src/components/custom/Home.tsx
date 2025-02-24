@@ -85,7 +85,7 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
       <div className="flex h-[800px] w-full flex-col items-center justify-center rounded-lg">
         <div className="  grid h-full w-full grid-cols-2 md:grid-cols-5 md:grid-rows-9 gap-4">
           {/* Background section */}
-          <div className="col-span-2 animate-fadeInLeft md:col-span-4 row-span-6 relative rounded-3xl bg-cover bg-center flex flex-col pl-6 justify-end pb-12 bg-[url('/assets/homeBg.jpeg')] before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:rounded-3xl">
+          <div className="col-span-2 animate-fadeInLeft md:col-span-4 row-span-6 relative rounded-3xl bg-cover bg-center flex flex-col pl-6 justify-end pb-12 bg-[url('/assets/banner.jpg')] before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:rounded-3xl">
             <div className="relative z-10 w-full">
               <div className="font-bold mt-10 md:mt-4 text-white text-start text-4xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
                 Code-ए-Manipal: The Ultimate
@@ -116,8 +116,8 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
           </div>
 
           {/* Prize pool section */}
-          <div className="col-span-1 row-span-2 animate-fadeInDown rounded-3xl bg-secondary p-4 z-20">
-            <div className="font-bebas text-pink text-4xl sm:text-5xl font-bold">
+          <div className="col-span-1 row-span-2 animate-fadeInDown rounded-3xl bg-[#F2989B] p-4 z-20">
+            <div className="font-bebas text-[#351220] text-4xl sm:text-5xl font-bold">
               PRIZE POOL
             </div>
             <div className="mt-4 sm:mt-2 text-white text-xl sm:text-xl font-bold">
@@ -129,8 +129,8 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
           </div>
 
           {/* Location section */}
-          <div className="col-span-1 row-span-2 animate-fadeInUp rounded-3xl bg-secondary p-2 z-20">
-            <div className="font-bold text-pink mt-0 text-4xl sm:text-5xl font-bebas between-768-900:text-3xl">
+          <div className="col-span-1 row-span-2 animate-fadeInUp rounded-3xl bg-[#F2989B] p-2 z-20">
+            <div className="font-bold text-[#351220] mt-0 text-4xl sm:text-5xl font-bebas between-768-900:text-3xl">
               LOCATION
             </div>
             <div className="font-bold mt-5 text-white text-md sm:text-l between-768-900:text-base">
@@ -139,8 +139,8 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
           </div>
 
           {/* Registrations section */}
-          <div className="col-span-2 md:col-span-2 min-w-1024:col-span-2 animate-fadeInDown row-span-3 md:row-span-2 rounded-3xl bg-secondary z-20">
-            <div className="text-pink mt-5 text-center text-5xl font-bold font-bebas">
+          <div className="col-span-2 md:col-span-2 min-w-1024:col-span-2 animate-fadeInDown row-span-3 md:row-span-2 rounded-3xl bg-[#F2989B] z-20">
+            <div className="text-[#351220] mt-5 text-center text-5xl font-bold font-bebas">
               REGISTRATIONS
             </div>
             {/* <div className="font-bold md:hidden lg:block text-4xl my-2 sm:text-8xl lg:text-8xl lg:mt-2 text-white">
@@ -155,9 +155,9 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
           </div>
 
           {/* Countdown Timer */}
-          <div className="col-span-2 md:col-span-3 min-w-1024:col-span-3 row-span-3 md:row-span-2 animate-fadeInUp rounded-3xl bg-secondary z-20">
+          <div className="col-span-2 md:col-span-3 min-w-1024:col-span-3 row-span-3 md:row-span-2 animate-fadeInUp rounded-3xl bg-[#F2989B] z-20">
             <div className="text-white flex flex-col justify-center items-center mt-1 mb-2">
-              <div className="text-pink mb-1 mt-2 text-center text-5xl font-bold font-bebas between-400-768:text-3xl">
+              <div className="text-[#351220] mb-1 mt-2 text-center text-5xl font-bold font-bebas between-400-768:text-3xl">
                 TIME LEFT
               </div>
               <div className="flex items-center space-x-2 sm:space-x-4">
