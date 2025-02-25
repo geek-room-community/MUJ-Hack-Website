@@ -102,7 +102,7 @@ export default function Component() {
             animate={inView ? "visible" : "hidden"}
             className="flex-1 w-full md:max-w-[30%] lg:max-w-[25%]"
           >
-            <PrizeCard title="2nd Prize" amount="₹20,000" position="left" icon="🥈" />
+            <PrizeCard title="2nd Prize" amount="revealing soon" position="left" icon="🥈" />
           </motion.div>
           <motion.div
             className="flex-1 w-full md:max-w-[40%] lg:max-w-[30%] order-first md:order-none"
@@ -124,7 +124,7 @@ export default function Component() {
               }
             }}
           >
-            <PrizeCard title="1st Prize" amount="₹30,000" position="center" icon="🏆" isFirst={true} />
+            <PrizeCard title="1st Prize" amount="revealing soon" position="center" icon="🏆" isFirst={true} />
           </motion.div>
           <motion.div
             variants={rightCardVariants}
@@ -132,7 +132,7 @@ export default function Component() {
             animate={inView ? "visible" : "hidden"}
             className="flex-1 w-full md:max-w-[30%] lg:max-w-[25%]"
           >
-            <PrizeCard title="3rd Prize" amount="₹15,000" position="right" icon="🥉" />
+            <PrizeCard title="3rd Prize" amount="revealing soon" position="right" icon="🥉" />
           </motion.div>
         </div>
         <motion.div
@@ -196,7 +196,7 @@ function ParticipationCard() {
       <div className="text-5xl mb-6 mx-auto w-20 h-20 flex items-center justify-center rounded-full text-primary">
         🎉
       </div>
-      <h3 className="text-3xl font-bold mb-3 text-pink">₹5,000</h3>
+      <h3 className="text-3xl font-bold mb-3 text-pink">revealing soon</h3>
       <p className="text-lg mb-4 text-white">Geek Room always brings something unique, right?</p>
       <p className="text-xl font-semibold mb-6 text-white">
       Here’s a special prize for the Best Freshers' Team to celebrate their brilliance!

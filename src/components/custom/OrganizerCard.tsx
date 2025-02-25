@@ -5,11 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const LeadOrganizers = () => {
   const organizers = [
-    { id: 1, image: "../../../assets/team_members/arnavGupta.jpg", name: "Arnav", linkedin: "https://www.linkedin.com/in/arnav-gupta-437a66256/" },
-    { id: 2, image: "../../../assets/team_members/manasChopra.jpg", name: "Manas", linkedin: "https://www.linkedin.com/in/themanas95826/" },
-    { id: 3, image: "../../../assets/team_members/prathamBatra.jpg", name: "Pratham", linkedin: "https://www.linkedin.com/in/pratham1908/" },
-    { id: 4, image: "../../../assets/team_members/SanidhyaGoel.jpg", name: "Sanidhya", linkedin: "https://www.linkedin.com/in/sanidhya-goel-2499991b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-    { id: 5, image: "../../../assets/team_members/vibhor.jpg", name: "Vibhor", linkedin: "https://www.linkedin.com/in/vibhor-aggarwal-726095189" },
+    { id: 1, image: "../../../assets/team_members/prathamBatra.jpg", name: "Pratham", linkedin: "https://www.linkedin.com/in/pratham1908/" },
+    { id: 2, image: "../../../assets/team_members/SanidhyaGoel.jpg", name: "Sanidhya", linkedin: "https://www.linkedin.com/in/sanidhya-goel-2499991b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { id: 3, image: "../../../assets/team_members/aditya.jpg", name: "Aditya", linkedin: "https://www.linkedin.com/in/adiii11" },
   ];
 
   return (

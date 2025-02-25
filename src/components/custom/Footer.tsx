@@ -1,4 +1,4 @@
-import logo from "/assets/logo.png";
+import logo from "/assets/grxmuj.png";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="w-full md:w-1/3 mb-8 md:mb-0 text-center">
           <img
             src={logo}
-            alt="JIMS Logo"
+            alt="MUJ Logo"
             className="h-32 w-auto mx-auto mb-4"
           />
           <p className="text-base md:text-lg lg:text-xl">

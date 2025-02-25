@@ -12,7 +12,7 @@ const faqs: FAQ[] = [
   {
     question: "What is Code-ए-Manipal and what makes it unique?",
     answer:
-      "Code-ए-Manipal is a groundbreaking hackathon jointly organized by JIMS Sector-5 Rohini and Geek Room. It provides a unique experience, redefining the boundaries of creativity and technology, transcending conventional hackathons.",
+      "Code-ए-Manipal is a groundbreaking hackathon jointly organized by Manipal University, Jaipur and Geek Room. It provides a unique experience, redefining the boundaries of creativity and technology, transcending conventional hackathons.",
   },
   {
     question: "How can I participate in Code-ए-Manipal?",

@@ -107,9 +107,9 @@ const Home = () => {
           {/* Logo section */}
           <div className="col-span-2 animate-fadeInLeft md:col-span-1 row-start-1 row-span-1 md:row-span-2 flex justify-center z-20">
             <img
-              src="/assets/logo.png"
+              src="/assets/grxmuj.png"
               alt="Logo"
-              className="h-24 md:h-28 w-auto"
+              className="h-24 md:h-28 my-auto w-auto"
             />
           </div>
 
