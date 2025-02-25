@@ -6,34 +6,32 @@ import data from "../../json/home.json";
 const Home = () => {
   const targetDate = new Date(Date.UTC(2025, 2, 21, 3, 30, 0)); // March 21, 2025, 9:00 AM IST
 
-// Countdown logic
-const calculateTimeLeft = () => {
-  const now = new Date();
-  const difference = targetDate.getTime() - now.getTime();
+  // Countdown logic
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
 
-  let timeLeft = {
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
   };
 
-  if (difference > 0) {
-    timeLeft = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
-    };
-  }
-
-  return timeLeft;
-};
-
-// Example usage: Logs countdown every second
-setInterval(() => console.log(calculateTimeLeft()), 1000);
-
-
+  // Example usage: Logs countdown every second
+  setInterval(() => console.log(calculateTimeLeft()), 1000);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -85,17 +83,17 @@ setInterval(() => console.log(calculateTimeLeft()), 1000);
       <div className="flex h-[800px] w-full flex-col items-center justify-center rounded-lg">
         <div className="  grid h-full w-full grid-cols-2 md:grid-cols-5 md:grid-rows-9 gap-4">
           {/* Background section */}
-          <div className="col-span-2 animate-fadeInLeft md:col-span-4 row-span-6 relative rounded-3xl bg-cover bg-center flex flex-col pl-6 justify-end pb-12 bg-[url('/assets/banner.jpg')] before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:rounded-3xl">
+          <div className="col-span-2 animate-fadeInLeft md:col-span-4 row-span-6 relative rounded-3xl bg-cover bg-center flex flex-col pl-6 justify-start pt-5 md:pt-12 bg-[url('/assets/bannerBg.png')] before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:rounded-3xl">
             <div className="relative z-10 w-full">
-              <div className="font-bold mt-10 md:mt-4 text-white text-start text-4xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
+              <div className="font-bold mt-2 md:mt-0 text-white text-start text-2xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
                 Code-ए-Manipal: The Ultimate
               </div>
-              <div className="font-bold mt-2 sm:mt-4 text-start text-white text-4xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
+              <div className="font-bold mt-2 sm:mt-4 text-start text-white text-2xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
                 36-Hour Hackathon
               </div>
-              <div className="flex justify-start">
+              <div className="flex justify-end pr-10">
                 <Button
-                  className="mt-4 text-xl sm:text-2xl h-12 w-32 md:h-14 md:w-48 rounded-xl text-black font-bold bg-pink hover:text-white"
+                  className="mt-4 text-xl sm:text-2xl h-12 w-32 md:h-14 md:w-48 rounded-xl text-[#F2989B] font-bold bg-[#351220] hover:text-white"
                   onClick={() =>
                     window.open("https://codemanipal.devfolio.co/", "_blank")
                   }
