@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lock } from "lucide-react";
 import { CardContent } from "../CardContent";
 import { rippleEffect } from "@/utils/rippleEffect";
 import { problemStatements as originalProblemStatements, CHANGE_DURATION } from "@/json/problem-statements";
@@ -75,7 +75,7 @@ const ProblemStatement = () => {
   };
 
   return (
-    <div ref={containerRef} className="py-12 h-fit grid grid-rows-[auto_1fr_auto]">
+    <div ref={containerRef} className="py-12 h-fit grid grid-rows-[auto_1fr_auto] select-none">
       <h1
         ref={titleRef}
         className="text-8xl sm:text-[14rem] md:text-[13rem] font-bebas text-[#f8e8d9] font-bold text-center mb-[3rem]"
@@ -111,14 +111,18 @@ const ProblemStatement = () => {
               {problemStatements.map((statement, index) => (
                 <CarouselItem key={index} className="lg:basis-4/5 xl:basis-2/5">
                   <div
-                    className={`transition-all duration-300 rounded-lg shadow-lg  ${
+                    className={`transition-all duration-300 rounded-lg shadow-lg relative overflow-hidden  ${
                       index === current
                         ? "scale-100 opacity-100"
                         : "scale-90 opacity-30"
-                    }`}
+                    } pointer-events-none`}
                   >
-                    <div className=" overflow-hidden rounded-lg shadow-lg">
-                      <CardContent {...statement} className="h-full" />
+                    <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center z-10">
+                      <Lock className="w-12 h-12 text-white" />
+                      <span className="text-white text-lg mt-2 font-bold">REVEALING SOON</span>
+                    </div>
+                    <div className="overflow-hidden rounded-lg shadow-lg blur-lg">
+                      <CardContent {...statement} className="h-full pointer-events-none" />
                     </div>
                   </div>
                 </CarouselItem>
