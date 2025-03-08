@@ -48,40 +48,39 @@ export default function Component() {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
-  {/* 2nd Prize - Silver (Desktop me pehle, Mobile me second) */}
-  <PrizeCard
-    title="2nd Prize"
-    amount="revealing soon"
-    icon="🥈"
-    glowColor="#C0C0C0"
-    borderColor="#C0C0C0"
-    delay={0.3}
-    className="md:w-[25%] lg:w-[22%] order-2 md:order-1" // 🟢 Mobile me 2nd, Desktop me 1st
-  />
+          {/* 2nd Prize - Silver (Desktop me pehle, Mobile me second) */}
+          <PrizeCard
+            title="2nd Prize"
+            amount="revealing soon"
+            icon="🥈"
+            glowColor="#C0C0C0"
+            borderColor="#C0C0C0"
+            delay={0.3}
+            className="md:w-[25%] lg:w-[22%] order-2 md:order-1" // 🟢 Mobile me 2nd, Desktop me 1st
+          />
 
-  {/* 1st Prize - Gold (Desktop me second, Mobile me pehla) */}
-  <PrizeCard
-    title="1st Prize"
-    amount="revealing soon"
-    icon="🏆"
-    glowColor="#FFD700"
-    borderColor="#FFD700"
-    delay={0.5}
-    className="md:w-[35%] lg:w-[30%] order-1 md:order-2" // 🟢 Mobile me 1st, Desktop me 2nd
-  />
+          {/* 1st Prize - Gold (Desktop me second, Mobile me pehla) */}
+          <PrizeCard
+            title="1st Prize"
+            amount="revealing soon"
+            icon="🏆"
+            glowColor="#FFD700"
+            borderColor="#FFD700"
+            delay={0.5}
+            className="md:w-[35%] lg:w-[30%] order-1 md:order-2" // 🟢 Mobile me 1st, Desktop me 2nd
+          />
 
-  {/* 3rd Prize - Bronze (Desktop me third, Mobile me third) */}
-  <PrizeCard
-    title="3rd Prize"
-    amount="revealing soon"
-    icon="🥉"
-    glowColor="#CD7F32"
-    borderColor="#CD7F32"
-    delay={0.7}
-    className="md:w-[25%] lg:w-[22%] order-3 md:order-3" // ✅ Mobile & Desktop dono me 3rd
-  />
-</div>
-
+          {/* 3rd Prize - Bronze (Desktop me third, Mobile me third) */}
+          <PrizeCard
+            title="3rd Prize"
+            amount="revealing soon"
+            icon="🥉"
+            glowColor="#CD7F32"
+            borderColor="#CD7F32"
+            delay={0.7}
+            className="md:w-[25%] lg:w-[22%] order-3 md:order-3" // ✅ Mobile & Desktop dono me 3rd
+          />
+        </div>
 
         {/* Participation Prize */}
         <ParticipationCard />
