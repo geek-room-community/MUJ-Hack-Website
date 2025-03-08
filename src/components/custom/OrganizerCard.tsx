@@ -12,7 +12,7 @@ const LeadOrganizers = () => {
 
   return (
     <div className="text-center mt-[2rem] md:ml-14 p-4">
-      <h1 className="md:text-[12rem] font-bebas text-9xl text-[#f8e8d9] font-bold mb-[2rem] md:mb-[5rem] text-center md:mt-[8rem]">
+      <h1 className="md:text-[12rem] font-bebas text-8xl text-[#f8e8d9] font-bold mb-[2rem] md:mb-[5rem] text-center md:mt-[8rem]">
         ORGANIZERS
       </h1>
 

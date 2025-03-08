@@ -45,16 +45,16 @@ const Sponsors = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
-      <h1 className="md:text-[13rem] mt-[0.1rem] font-bebas text-8xl text-[#f8e8d9] font-bold mb-[4rem] md:mb-[6rem] text-center">
+      <h1 className="md:text-[13rem] md:mt-[14.7rem] font-bebas text-8xl text-[#f8e8d9]  font-bold sm:mb-[2rem] mb-[6.8rem] text-center">
         SPONSORS
       </h1>
 
       {Object.entries(categories).map(([category, sponsors]) => (
         <div
           key={category}
-          className="w-full max-w-6xl px-4 sm:px-6 mb-12 flex flex-col items-center"
+          className="w-full max-w-6xl px-4 sm:px-4 md:mb-[10rem] flex flex-col items-center"
         >
-          <h2 className="text-4xl sm:text-5xl font-bebas text-pink mb-6 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bebas text-[#f8e8d9] md:mb-9 md:mt-2 text-center">
             {formatCategoryName(category)}
           </h2>
           <div

@@ -74,7 +74,7 @@ const ProblemStatement = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-full flex flex-col items-center justify-center py-16 select-none"
+      className="min-h-screen w-full flex flex-col items-center justify-center py-[10rem] select-none"
       style={{ background: "#210F09" }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center">

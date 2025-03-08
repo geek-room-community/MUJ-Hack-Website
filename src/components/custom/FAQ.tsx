@@ -78,7 +78,7 @@ export default function Faq() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-14 md:pl-14">
+    <div className="max-w-6xl mx-auto px-4 py-14 md:pl-14">
       <h2 className="md:text-[13rem] text-[6.4rem] font-bebas text-[#f8eadd] font-bold mb-[3rem] md:mb-[5rem] text-center">
         FAQS
       </h2>
@@ -86,12 +86,12 @@ export default function Faq() {
       <div className="space-y-8">
         {faqs.map((faq, index) => (
           <div key={index} className="relative">
-            <div className="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg">
+            <div className="bg-[#f8eadd] rounded-3xl overflow-hidden shadow-lg">
               <button
                 className="w-full text-left p-7 focus:outline-none flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-bold text-white text-lg md:text-2xl pr-8">
+                <span className="font-bold text-[#210F09] text-lg md:text-2xl pr-8">
                   {faq.question}
                 </span>
                 <div className="bg-primary rounded-full p-1.5 flex-shrink-0">
