@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
-import user from "/assets/Judges/user.jpg";
+import user from "/assets/Main Logo.png";
 
 interface Judge {
   img: string;
@@ -53,7 +53,7 @@ export default function Judge(): JSX.Element {
         {judges.map((judge, index) => (
           <div
             key={index}
-            className={`relative overflow-hidden flex justify-center items-center rounded-2xl glassy-div ${
+            className={`relative overflow-hidden flex justify-center items-center rounded-2xl glassy-div text-[#210F09] ${
               index === 1 || index === judges.length - 2
                 ? "w-48 h-72 xl:w-56 xl:h-80"
                 : "w-64 h-80 xl:w-72 xl:h-96"
@@ -62,7 +62,7 @@ export default function Judge(): JSX.Element {
             <img
               src={judge.img}
               alt={judge.name}
-              className="h-full w-full object-cover rounded-2xl"
+              className="h-full w-full object-cover rounded-2xl text-[#210F09]"
             />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded-md flex items-center space-x-2">
               <span>{judge.name}</span>
@@ -71,7 +71,7 @@ export default function Judge(): JSX.Element {
                   href={judge.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-pink"
+                  className="text-[#f8e8d9]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,14 +113,14 @@ export default function Judge(): JSX.Element {
                   alt={judge.name}
                   className="h-full w-full object-cover rounded-2xl"
                 />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded-md flex items-center space-x-2">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-[#210F09] text-sm px-3 py-1 rounded-md flex items-center space-x-2">
                   <span>{judge.name}</span>
                   {judge.linkedin && (
                     <a
                       href={judge.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-pink"
+                      className="text-[#210F09]"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

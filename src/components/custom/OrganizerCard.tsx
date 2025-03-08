@@ -5,20 +5,20 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const LeadOrganizers = () => {
   const organizers = [
-    { id: 1, image: "../../../assets/team_members/prathamBatra.jpg", name: "Pratham", linkedin: "https://www.linkedin.com/in/pratham1908/" },
-    { id: 2, image: "../../../assets/team_members/SanidhyaGoel.jpg", name: "Sanidhya", linkedin: "https://www.linkedin.com/in/sanidhya-goel-2499991b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-    { id: 3, image: "../../../assets/team_members/aditya.jpg", name: "Aditya", linkedin: "https://www.linkedin.com/in/adiii11" },
+    { id: 1, image: "../../../assets/team_members/prathamBatra.jpg", name: "Pratham Batra", linkedin: "https://www.linkedin.com/in/pratham1908/" },
+    { id: 2, image: "../../../assets/team_members/SanidhyaGoel.jpg", name: "Sanidhya Goel", linkedin: "https://www.linkedin.com/in/sanidhya-goel-2499991b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { id: 3, image: "../../../assets/team_members/aditya.jpg", name: "Aditya Pratap", linkedin: "https://www.linkedin.com/in/adiii11" },
   ];
 
   return (
     <div className="text-center mt-[2rem] md:ml-14 p-4">
-      <h1 className="md:text-[12rem] font-bebas text-8xl text-[#f8e8d9] font-bold mb-[2rem] md:mb-[5rem] text-center">
+      <h1 className="md:text-[12rem] font-bebas text-9xl text-[#f8e8d9] font-bold mb-[2rem] md:mb-[5rem] text-center md:mt-[8rem]">
         ORGANIZERS
       </h1>
 
       {/* Desktop view with flex layout */}
       <motion.div
-        className="hidden md:flex justify-center gap-16"
+        className="hidden md:flex justify-center gap-24"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -29,7 +29,7 @@ const LeadOrganizers = () => {
             className={`${index === 0 || index === organizers.length - 1
               ? "w-64 h-96 xl:w-72 xl:h-[400px]"
               : "w-64 h-96 xl:w-72 xl:h-[400px]"
-              } bg-transparent rounded-[100px] flex justify-center relative shadow-lg hover:shadow-2xl transition-all duration-300`}
+              } bg-transparent rounded-xl flex justify-center relative shadow-lg hover:shadow-2xl transition-all duration-300`}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.4 }}
@@ -37,12 +37,12 @@ const LeadOrganizers = () => {
             <img
               src={organizer.image}
               alt={organizer.name}
-              className="rounded-[100px] w-full h-full object-cover"
+              className="rounded-[52px] w-full h-[470px] object-cover text-[#210F09]"
             />
             <div
               style={{
                 position: 'absolute',
-                bottom: '10px',
+                bottom: '9px',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 textAlign: 'center',
@@ -61,16 +61,20 @@ const LeadOrganizers = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: 'white',
+                  backgroundColor:"rgb(33, 15, 9, 0.76)",
+                  color: 'pink',
                   textDecoration: 'none',
-                  fontSize: '18px',
+                  fontSize: '16px',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '8px',
+                  gap: '9px',
+                  padding: "7px",
+                  paddingRight:"5px",
+                  borderRadius:"5px"
                 }}
               >
                 {organizer.name}
-                <i className="fab fa-linkedin" style={{ fontSize: '18px', color: 'white' }}></i>
+                <i className="fab fa-linkedin" style={{ fontSize: '18px', color: 'rgb(248, 232, 217)' }}></i>
               </a>
             </div>
           </motion.div>
@@ -146,7 +150,7 @@ const LeadOrganizers = () => {
                   }}
                 >
                   {organizer.name}
-                  <i className="fab fa-linkedin" style={{ fontSize: '12px', color: 'gray' }}></i>
+                  
                 </a>
               </div>
             </motion.div>
