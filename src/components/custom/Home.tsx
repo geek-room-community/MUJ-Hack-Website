@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { GiLaurelsTrophy } from "react-icons/gi";
+import { FiMapPin, FiUsers } from "react-icons/fi";
 import data from "../../json/home.json";
 
 const Home = () => {
@@ -29,9 +30,6 @@ const Home = () => {
 
     return timeLeft;
   };
-
-  // Example usage: Logs countdown every second
-  setInterval(() => console.log(calculateTimeLeft()), 1000);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -78,131 +76,139 @@ const Home = () => {
     };
   }, [targetCount, duration]);
 
+  // TimerBlock component with TypeScript types
+  const TimerBlock = ({ value, label }: { value: number; label: string }) => (
+    <div className="flex flex-col items-center">
+      <div className="bg-[#351220] w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center border-4 border-[#F2989B]">
+        <span className="text-2xl md:text-4xl font-bold text-[#F2989B]">
+          {String(value).padStart(2, "0")}
+        </span>
+      </div>
+      <span className="mt-2 text-xs md:text-sm font-medium text-[#F2989B]">{label}</span>
+    </div>
+  );
+
+  
+
   return (
-    <div className="mb-40">
-      <div className="flex h-[800px] w-full flex-col items-center justify-center rounded-lg">
-        <div className="  grid h-full w-full grid-cols-2 md:grid-cols-5 md:grid-rows-9 gap-4">
-          {/* Background section */}
-          <div className="col-span-2 animate-fadeInLeft md:col-span-4 row-span-6 relative rounded-3xl bg-cover bg-center flex flex-col pl-6 justify-start pt-5 md:pt-12 bg-[url('/assets/bannerBg.png')] before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:rounded-3xl">
-            <div className="relative z-10 w-full">
-              <div className="font-bold mt-2 md:mt-0 text-white text-start text-2xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
-                Code-ए-Manipal: The Ultimate
+    <div className="min-h-screen relative -mt-10 mb-40 overflow-hidden">
+      {/* Background decorative elements */}
+      {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-[#F2989B] filter blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-[#F2989B] filter blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-40 h-40 rounded-full bg-[#F2989B] filter blur-2xl"></div>
+      </div> */}
+
+      {/* Main Content */}
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="pt-8 px-6 flex justify-between items-center">
+          <img
+            src="/assets/grxmuj.png"
+            alt="Logo"
+            className="h-16 md:h-20 w-auto"
+          />
+          <Button
+            className="bg-[#F2989B] hover:bg-[#F2686B] text-[#351220] font-bold px-6 py-2 rounded-full transform transition-transform duration-300 hover:scale-105"
+            onClick={() =>
+              window.open("https://codemanipal.devfolio.co/", "_blank")
+            }
+          >
+            Register
+          </Button>
+        </header>
+
+        {/* Hero Section */}
+        <section className="mt-8 relative">
+          <div className="relative h-[70vh] overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/assets/bannerBg.png')] rounded-2xl bg-cover bg-center opacity-40"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#351220] via-transparent to-transparent"></div>
+            
+            <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 [text-shadow:_0_4px_8px_#000000]">
+                Code-<span className="text-[#F2989B]">ए</span>-Manipal
+              </h1>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#F2989B] mb-6 [text-shadow:_0_4px_8px_#000000]">
+                The Ultimate 36-Hour Hackathon
+              </h2>
+              
+              <div className="flex space-x-4 md:space-x-8 mt-10 text-[#F2989B]">
+                <TimerBlock value={timeLeft.days} label="Days" />
+                <TimerBlock value={timeLeft.hours} label="Hours" />
+                <TimerBlock value={timeLeft.minutes} label="Minutes" />
+                <TimerBlock value={timeLeft.seconds} label="Seconds" />
               </div>
-              <div className="font-bold mt-2 sm:mt-4 text-start text-white text-2xl sm:text-5xl lg:text-6xl [text-shadow:_0_4px_8px_#000000]">
-                36-Hour Hackathon
-              </div>
-              <div className="flex justify-end pr-10">
-                <Button
-                  className="mt-4 text-xl sm:text-2xl h-12 w-32 md:h-14 md:w-48 rounded-xl text-[#F2989B] font-bold bg-[#351220] hover:text-white"
-                  onClick={() =>
-                    window.open("https://codemanipal.devfolio.co/", "_blank")
-                  }
-                >
-                  Register
-                </Button>
-              </div>
             </div>
           </div>
+        </section>
 
-          {/* Logo section */}
-          <div className="col-span-2 animate-fadeInLeft md:col-span-1 row-start-1 row-span-1 md:row-span-2 flex justify-center z-20">
-            <img
-              src="/assets/grxmuj.png"
-              alt="Logo"
-              className="h-24 md:h-28 my-auto w-auto"
-            />
-          </div>
-
-          {/* Prize pool section */}
-          <div className="col-span-1 row-span-2 animate-fadeInDown rounded-3xl bg-[#F2989B] p-4 z-20">
-            <div className="font-bebas text-[#351220] text-4xl sm:text-5xl font-bold">
-              PRIZE POOL
-            </div>
-            <div className="mt-4 sm:mt-2 text-white text-xl sm:text-xl font-bold">
-              {data.prizePool}
-            </div>
-            <div className="text-white text-4xl sm:text-3xl mt-2 flex justify-center between-768-900:invisible">
-              <GiLaurelsTrophy />
-            </div>
-          </div>
-
-          {/* Location section */}
-          <div className="col-span-1 row-span-2 animate-fadeInUp rounded-3xl bg-[#F2989B] p-2 z-20">
-            <div className="font-bold text-[#351220] mt-0 text-4xl sm:text-5xl font-bebas between-768-900:text-3xl">
-              LOCATION
-            </div>
-            <div className="font-bold mt-5 text-white text-md sm:text-l between-768-900:text-base">
-              {data.location}
-            </div>
-          </div>
-
-          {/* Registrations section */}
-          <div className="col-span-2 md:col-span-2 min-w-1024:col-span-2 animate-fadeInDown row-span-3 md:row-span-2 rounded-3xl bg-[#F2989B] z-20">
-            <div className="text-[#351220] mt-5 text-center text-5xl font-bold font-bebas">
-              REGISTRATIONS
-            </div>
-            {/* <div className="font-bold md:hidden lg:block text-4xl my-2 sm:text-8xl lg:text-8xl lg:mt-2 text-white">
-              {Math.floor(count)} +
-            </div>
-            <div className="font-bold hidden md:block lg:hidden text-6xl mt-2 sm:text-8xl text-white">
-              {Math.floor(count)} +
-            </div> */}
-            <div className="font-bold text-5xl mb-2 text-white min-w-1024:text-7xl">
-              {Math.floor(count)} +
-            </div>
-          </div>
-
-          {/* Countdown Timer */}
-          <div className="col-span-2 md:col-span-3 min-w-1024:col-span-3 row-span-3 md:row-span-2 animate-fadeInUp rounded-3xl bg-[#F2989B] z-20">
-            <div className="text-white flex flex-col justify-center items-center mt-1 mb-2">
-              <div className="text-[#351220] mb-1 mt-2 text-center text-5xl font-bold font-bebas between-400-768:text-3xl">
-                TIME LEFT
-              </div>
-              <div className="flex items-center space-x-2 sm:space-x-4">
-                {/* Days */}
-                <div className="text-center bg-background/30 p-2 sm:p-4 rounded-xl between-768-900:p-3">
-                  <p className="lg:text-3xl md:text-2xl sm:text-2xl text-4xl font-bold">
-                    {String(timeLeft.days).padStart(2, "0")}
-                  </p>
-                  <p className="text-xs sm:text-base">Days</p>
+        {/* Stats Cards */}
+        <section className="relative -mt-20 px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-[#F2989B] rounded-3xl shadow-2xl overflow-hidden">
+              <div className="flex flex-col md:flex-row">
+                {/* Prize Pool */}
+                <div className="flex-1 p-6 border-b md:border-b-0 md:border-r border-[#351220]/20">
+                  <div className="flex items-center space-x-4">
+                    <div className="p-3 rounded-full bg-[#351220] text-[#F2989B]">
+                      <GiLaurelsTrophy className="text-3xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#351220]">PRIZE POOL</h3>
+                      <p className="text-2xl font-bold text-white">{data.prizePool}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="lg:text-6xl md:text-3xl sm:text-2xl text-4xl font-bold mb-2">
-                  :
+                
+                {/* Location */}
+                <div className="flex-1 p-6 border-b md:border-b-0 md:border-r border-[#351220]/20">
+                  <div className="flex items-center space-x-4">
+                    <div className="p-3 rounded-full bg-[#351220] text-[#F2989B]">
+                      <FiMapPin className="text-3xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#351220]">LOCATION</h3>
+                      <p className="text-lg font-bold text-white">{data.location}</p>
+                    </div>
+                  </div>
                 </div>
-
-                {/* Hours */}
-                <div className="text-center bg-background/30 p-2 sm:p-4 rounded-xl between-768-900:p-3">
-                  <p className="lg:text-3xl md:text-2xl sm:text-2xl text-4xl font-bold">
-                    {String(timeLeft.hours).padStart(2, "0")}
-                  </p>
-                  <p className="text-xs sm:text-base">Hours</p>
-                </div>
-                <div className="lg:text-6xl md:text-3xl sm:text-2xl text-4xl font-bold mb-2">
-                  :
-                </div>
-
-                {/* Minutes */}
-                <div className="text-center bg-background/30 p-2 sm:p-4 rounded-xl between-768-900:p-3">
-                  <p className="lg:text-3xl md:text-2xl sm:text-2xl text-4xl font-bold">
-                    {String(timeLeft.minutes).padStart(2, "0")}
-                  </p>
-                  <p className="text-xs sm:text-base">Minutes</p>
-                </div>
-                <div className="lg:text-6xl md:text-3xl sm:text-2xl text-4xl font-bold mb-2">
-                  :
-                </div>
-
-                {/* Seconds */}
-                <div className="text-center bg-background/30 p-2 sm:p-4 rounded-xl between-768-900:p-3">
-                  <p className="lg:text-3xl md:text-2xl text-white sm:text-2xl text-4xl font-bold">
-                    {String(timeLeft.seconds).padStart(2, "0")}
-                  </p>
-                  <p className="text-xs text-white sm:text-base">Seconds</p>
+                
+                {/* Registrations */}
+                <div className="flex-1 p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="p-3 rounded-full bg-[#351220] text-[#F2989B]">
+                      <FiUsers className="text-3xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#351220]">REGISTRATIONS</h3>
+                      <p className="text-2xl font-bold text-white">{Math.floor(count)}+</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        {/* <section className="py-16 px-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#F2989B] mb-6">
+              Ready to Code, Collaborate & Conquer?
+            </h2>
+            <p className="text-lg text-white/80 mb-8">
+              Join India's most exciting collegiate hackathon and showcase your skills in this 36-hour coding marathon. Build innovative solutions, win amazing prizes, and network with tech enthusiasts!
+            </p>
+            <Button
+              className="bg-[#F2989B] hover:bg-[#F2686B] text-[#351220] font-bold px-10 py-6 text-xl rounded-full transform transition-transform duration-300 hover:scale-105"
+              onClick={() =>
+                window.open("https://codemanipal.devfolio.co/", "_blank")
+              }
+            >
+              Register Now
+            </Button>
+          </div>
+        </section> */}
       </div>
     </div>
   );

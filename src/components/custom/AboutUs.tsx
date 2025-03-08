@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
           About Us
         </h1>
         <p className="font-bold text-white text-xl leading-relaxed mb-[2rem]">
-          Code-ए-Manipal, a thrilling 36-hour hackathon set for February 2025,
+          Code-ए-Manipal, a thrilling 36-hour hackathon set for March 2025,
           invites tech enthusiasts to an electrifying journey of innovation.
           Tackle challenging coding problems, showcase your skills, and grab the
           opportunity to win amazing swags and prizes. Level up your coding
@@ -27,9 +27,9 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="bg-slate-900 col-span-2 row-span-3 rounded-3xl overflow-hidden hover:cursor-pointer">
             <img
-              src="/assets/Logo Text.png"
+              src="/assets/about10.jpg"
               alt="Logo"
-              className="w-full p-4 h-full object-contain rounded-3xl hover:scale-110 transition-all duration-300 ease-in-out "
+              className="w-full h-full object-cover rounded-3xl hover:scale-110 transition-all duration-300 ease-in-out "
             />
           </div>
           <div className="bg-slate-400 col-span-2 row-span-4 rounded-3xl overflow-hidden hover:cursor-pointer">
