@@ -88,10 +88,10 @@ function App() {
           <div id="LeadOrganizers" ref={LeadOrganizersRef} className="h-100">
             <LeadOrganizers />
           </div>
-          <div id="sponsors" ref={sponsorsRef} className="h-auto mt-[10rem]">
+          <div id="sponsors" ref={sponsorsRef} className="h-auto ">
             <Sponsors />
           </div>
-          <div id="faq" ref={faqRef} className="h-[90rem] sm:h-[85rem] mt-16">
+          <div id="faq" ref={faqRef} className="h-[90rem] sm:h-[85rem]">
             <Faq />
           </div>
           {/* <div id="team" ref={mentorCardRef} className="h-screen">
