@@ -82,7 +82,7 @@ function App() {
           <div id="prizes" ref={prizePoolRef} className="h-[25rem]">
             <Prizes />
           </div>
-          <div id="judge" ref={JudgeRef} className="h-[50rem] mt-[90rem] md:mt-[70rem] sm:mt-[95rem] lg:mt-[55rem] pt-10">
+          <div id="judge" ref={JudgeRef} className="md:h-[75rem] h-[55rem] mt-[90rem] md:mt-[70rem] sm:mt-[95rem] lg:mt-[55rem] pt-10">
             <Judge />
           </div>
           <div id="LeadOrganizers" ref={LeadOrganizersRef} className="h-100">
