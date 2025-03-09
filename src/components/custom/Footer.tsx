@@ -2,7 +2,7 @@ import logo from "/assets/grxmuj.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f8e8d9] text-[#210F09] py-10 w-screen mt-[54rem] rounded-t-[50px] -ml-[50vw] -mr-[50vw] left-1/2 relative">
+    <footer className="bg-[#3f2117] text-[#f8eadd] py-10 w-screen mt-[54rem] rounded-t-[50px] -ml-[50vw] -mr-[50vw] left-1/2 relative">
       <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-start">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 text-center">
           <img
@@ -35,14 +35,14 @@ const Footer = () => {
         </div>
 
         <div className="w-full md:w-1/3 mb-8 md:mb-0 text-center">
-          <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#210F09] mb-4 border-b-2 border-pink-500 inline-block">
+          <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#fedbbb] mb-4 border-b-2 border-pink-500 inline-block">
             Useful Links
           </h3>
           <ul className="list-none space-y-3">
             <li>
               <a
                 href="https://linktr.ee/geekroom"
-                className="text-base md:text-lg lg:text-xl transition-colors duration-200 ease-in-out text-[#210F09]hover:text-pink-400"
+                className="text-base md:text-lg lg:text-xl transition-colors duration-200 ease-in-out text-[#f8eadd] hover:text-pink-400"
               >
                 Linktree
               </a>
@@ -50,7 +50,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://codemanipal.devfolio.co/"
-                className="text-base md:text-lg lg:text-xl transition-colors duration-200 ease-in-out text-[#210F09] hover:text-pink-400"
+                className="text-base md:text-lg lg:text-xl transition-colors duration-200 ease-in-out text-[#f8eadd] hover:text-pink-400"
               >
                 Devfolio
               </a>
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
 
         <div className="w-full md:w-1/3 text-center">
-          <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#210F09] mb-4 border-b-2 border-pink-500 inline-block">
+          <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-[#fedbbb] mb-4 border-b-2 border-pink-500 inline-block">
             Contact Us
           </h3>
           <address className="not-italic text-sm md:text-base lg:text-lg">
