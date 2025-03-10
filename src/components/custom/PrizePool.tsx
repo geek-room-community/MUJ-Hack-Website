@@ -34,7 +34,7 @@ export default function Component() {
   return (
     <motion.section
       ref={ref}
-      className="py-12 sm:py-16 bg-[#210F09] relative overflow-hidden"
+      className="py-12 sm:py-16 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // 🔥 Use inView here
       transition={{ duration: 1 }}

@@ -51,7 +51,7 @@ export default function Judge(): JSX.Element {
         </h1>
       </div>
 
-      {/* Desktop View - Optimized for 5 judges */}
+      {/* Desktop View */}
       <div className="hidden lg:block mb-16 relative">
   <div className="max-w-7xl mx-auto relative">
     <div className="flex flex-wrap justify-center items-center gap-8 xl:gap-12">
@@ -62,7 +62,6 @@ export default function Judge(): JSX.Element {
         w-64 h-80 xl:w-72 xl:h-96
         shadow-lg transition-all duration-500 hover:scale-105 hover:z-10"
         >
-          {/* Overlay layer - pointer events disabled */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-70 z-10 pointer-events-none"></div>
           
           <img
@@ -96,7 +95,6 @@ export default function Judge(): JSX.Element {
             </div>
           </div>
 
-          {/* Hover border - pointer events disabled */}
           <div className="absolute inset-0 border border-pink-500/30 rounded-2xl z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
       ))}
@@ -105,8 +103,8 @@ export default function Judge(): JSX.Element {
 </div>
 
 
-      {/* Mobile View with Enhanced Swiper */}
-      <div className="lg:hidden">
+      {/* Mobile View */}
+      <div className="lg:hidden overflow-hidden">
         <Swiper
           effect="cards"
           grabCursor={true}
