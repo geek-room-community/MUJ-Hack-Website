@@ -8,11 +8,12 @@ const AboutUs: React.FC = () => {
           About Us
         </h1>
         <p className="font-bold text-white text-xl leading-relaxed mb-[2rem]">
-          Code-ए-Manipal, a 36-hour hackathon in February 2025, invites tech
-          enhusisasts to a reviting experience of innovation. Dive into coding
-          challenges, showcase your skills, and seize the chance to win exciting
-          swags and prizes. Elevate your coding game, connect with industry
-          experts, and leave your mark on the future of tech.
+          Code-ए-Manipal, a thrilling 36-hour hackathon set for March 2025,
+          invites tech enthusiasts to an electrifying journey of innovation.
+          Tackle challenging coding problems, showcase your skills, and grab the
+          opportunity to win amazing swags and prizes. Level up your coding
+          expertise, network with industry leaders, and make your mark on the
+          future of technology!
         </p>
       </div>
       <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 md:ml-6 mt-6">
@@ -26,9 +27,9 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="bg-slate-900 col-span-2 row-span-3 rounded-3xl overflow-hidden hover:cursor-pointer">
             <img
-              src="/assets/Logo Text.png"
+              src="/assets/about10.jpg"
               alt="Logo"
-              className="w-full p-4 h-full object-contain rounded-3xl hover:scale-110 transition-all duration-300 ease-in-out "
+              className="w-full h-full object-cover rounded-3xl hover:scale-110 transition-all duration-300 ease-in-out "
             />
           </div>
           <div className="bg-slate-400 col-span-2 row-span-4 rounded-3xl overflow-hidden hover:cursor-pointer">
